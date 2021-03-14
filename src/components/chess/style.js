@@ -15,7 +15,7 @@ export const Square = styled.div`
   justify-content: center;
   align-items: center;
   background-color: ${(props) => (needTransparent(props) ? 'transparent' : theme.alpha)};
-  border: ${(props) => needBorder(props) && '0.5px solid black'};
+  border: 0.5px solid ${(props) => (needBorder(props) ? 'black' : 'transparent')};
   border-top: ${(props) => needBorderTop(props) && '1px solid black'};
   border-left: ${(props) => needBorderLeft(props) && '1px solid black'};
   border-right: ${(props) => needBorderRight(props) && '1px solid black'};
