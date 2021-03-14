@@ -1,10 +1,14 @@
 import React from 'react';
 
-import { Container, BlackChess, WhiteChess } from './style';
+import { Square, BlackChess, WhiteChess } from './style';
 
 function Chess(props) {
   const SelectedChess = props.isBlack ? <BlackChess /> : <WhiteChess />;
-  return <Container>{SelectedChess}</Container>;
+  return (
+    <Square rowIdx={props.rowIdx} colIdx={props.colIdx}>
+      {SelectedChess}
+    </Square>
+  );
 }
 
 export default Chess;

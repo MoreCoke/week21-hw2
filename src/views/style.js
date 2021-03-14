@@ -7,7 +7,7 @@ export const Container = styled.div`
 `;
 
 export const Checkerboard = styled.div`
-  border: 0.5px solid black;
+  padding: 20px;
 `;
 
 export const Row = styled.div`
