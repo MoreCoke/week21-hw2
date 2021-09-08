@@ -54,3 +54,8 @@ export const BlackChess = styled(CircleButton)`
 export const WhiteChess = styled(CircleButton)`
   background-color: white;
 `;
+
+export const TransparentChess = styled(CircleButton)`
+  background-color: transparent;
+  box-shadow: none;
+`;
