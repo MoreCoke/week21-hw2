@@ -6,11 +6,13 @@ function Chess(props) {
   const renderChess = () => {
     let SelectedChess;
     if (props.color === 'white') {
-      SelectedChess = <WhiteChess onClick={props.onClick} />;
+      SelectedChess = <WhiteChess onClick={() => props.onClick(props.rowIdx, props.colIdx)} />;
     } else if (props.color === 'black') {
-      SelectedChess = <BlackChess onClick={props.onClick} />;
+      SelectedChess = <BlackChess onClick={() => props.onClick(props.rowIdx, props.colIdx)} />;
     } else {
-      SelectedChess = <TransparentChess onClick={props.onClick} />;
+      SelectedChess = (
+        <TransparentChess onClick={() => props.onClick(props.rowIdx, props.colIdx)} />
+      );
     }
     return SelectedChess;
   };

@@ -5,7 +5,7 @@ import Chess from '../components/chess';
 import useGame from '../hooks/useGame';
 
 function App() {
-  const { game, chessColor, updateGame, updateChessColor } = useGame();
+  const { game, onChessClick } = useGame();
 
   return (
     <Container>
@@ -17,10 +17,7 @@ function App() {
                 rowIdx={rowIndex}
                 colIdx={colIndex}
                 key={`col-${colIndex}`}
-                onClick={() => {
-                  updateGame(rowIndex, colIndex, chessColor);
-                  updateChessColor();
-                }}
+                onClick={onChessClick}
                 color={col}
               />
             ))}

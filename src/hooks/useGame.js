@@ -26,5 +26,13 @@ export default function useGame(arr) {
     setChessColor('black');
   });
 
-  return { game, setGame, chessColor, setChessColor, updateGame, updateChessColor };
+  const onChessClick = useCallback(
+    (row, column) => {
+      updateGame(row, column, chessColor);
+      updateChessColor();
+    },
+    [chessColor]
+  );
+
+  return { game, setGame, onChessClick };
 }
